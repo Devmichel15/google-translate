@@ -75,7 +75,7 @@ function App() {
               onClick={swapLanguages}
               className="p-2 hover:bg-gray-200 rounded-sm transition-all cursor-pointer outline-none focus:ring-2 focus:ring-gray-300"
             >
-              <img src="../public/img_btn.png" className="w-3.5" />
+              <img src="/public/img_btn.png" className="w-3.5" />
             </button>
 
             <select
