@@ -43,9 +43,7 @@ function App() {
       return;
     }
     setIsLoading(true);
-    console.log("traduzindo...");
     const result = await translateText(text, sourceLang, targetLang);
-    console.log(result);
     setTranslatedText(result);
     setIsLoading(false);
   };
@@ -93,17 +91,17 @@ function App() {
             </select>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 h-96">
             <div className="p-4">
               <textarea
                 value={text}
                 onChange={(e) => setText(e.target.value)}
                 placeholder="escreva algo..."
-                className="w-full h-52 text-lg bg-transparent resize-none outline-none border-none"
+                className="w-full text-lg resize-none outline-none border-none"
               ></textarea>
             </div>
 
-            <div className="p-4 relative bg-gray-200 border-l border-gray-200">
+            <div className="p-4 relative bg-gray-200 border-l border-gray-200 w-full ">
               <div className="absolute inset-0 flex items-center justify-center">
                 {isLoading ? (
                   <div className="animate-spin rounded-full border-2 w-8 h-8 border-t-white border-blue-500 "></div>
